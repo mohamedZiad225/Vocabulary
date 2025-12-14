@@ -56,11 +56,11 @@ class SplashViewController: UIViewController {
 
         let rootViewController: UIViewController
 
-//        if TutorialStorage.hasSeen(.home) {
-//            rootViewController = navigateToHome()
-//        } else {
+        if TutorialStorage.hasSeen(.home) {
+            rootViewController = navigateToHome()
+        } else {
             rootViewController = navigateToWelcome()
-//        }
+        }
 
         let navController = UINavigationController(rootViewController: rootViewController)
         sceneDelegate.window?.rootViewController = navController
